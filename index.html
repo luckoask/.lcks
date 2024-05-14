@@ -8,13 +8,13 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Hide scroll bars */
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full height of the viewport */
-            background-color: rgb(192, 192, 192); /* Fallback color */
+            height: 100vh;
+            background-color: rgb(192, 192, 192);
         }
         video#bg-video {
             position: fixed;
@@ -22,47 +22,47 @@
             left: 0;
             min-width: 100%;
             min-height: 100%;
-            z-index: -1; /* Place it behind all other elements */
+            z-index: -1;
         }
         header {
             padding: 20px;
-            text-align: center; /* Center header text */
-            margin-bottom: -50px; /* Move the header up by 50 pixels */
-            z-index: 1; /* Ensure header is above content */
+            text-align: center;
+            margin-bottom: -50px;
+            z-index: 1;
         }
         header h1 {
-            font-family: "Comic Sans MS", cursive; /* Change font to Comic Sans MS */
-            text-shadow: 0 0 15px white; /* Add white stroke to text */
+            font-family: "Comic Sans MS", cursive;
+            text-shadow: 0 0 15px white;
         }
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            z-index: 1; /* Ensure nav is above content */
+            z-index: 1;
         }
         nav ul li {
             display: inline;
             margin-right: 20px;
-            margin-bottom: 20px; /* Move the buttons slightly down */
+            margin-bottom: 20px;
         }
         nav ul li a {
-            color: black; /* Default text color */
+            color: black;
             text-decoration: none;
-            border: 1px solid black; /* Add border to buttons */
-            padding: 15px 30px; /* Increase padding for buttons */
-            border-radius: 4px; /* Rounded corners for buttons */
-            font-size: 16px; /* Increase font size for buttons */
-            font-weight: bold; /* Increase font weight */
+            border: 1px solid black;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
         }
         nav ul li a:hover {
-            background-color: black; /* Change background color on hover */
-            color: lightblue; /* Change text color on hover */
+            background-color: black;
+            color: lightblue;
         }
         section {
             padding: 50px;
-            text-align: center; /* Center section content */
-            color: black; /* Default text color */
-            z-index: 1; /* Ensure section is above content */
+            text-align: center;
+            color: black;
+            z-index: 1;
         }
         footer {
             text-align: center;
@@ -70,9 +70,9 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            color: white; /* Footer text color */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            z-index: 1; /* Ensure footer is above content */
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
         .click-overlay {
             background-color: rgb(0, 0, 0);
@@ -90,11 +90,11 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 999; /* Ensure overlay is above everything */
+            z-index: 999;
         }
         .click-overlay.hidden {
             opacity: 0;
-            pointer-events: none; /* Disable click events when hidden */
+            pointer-events: none;
         }
         .glow {
             text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
@@ -110,28 +110,27 @@
                 <li><a href="https://www.youtube.com/channel/UCccl1WENi0Bhol2CmJY7msw?sub_confirmation=1" target="_blank">Youtube</a></li>
                 <li><a href="https://t.me/+Rxi9E1EH5tQ3YzNk" target="_blank">Telegram</a></li>
                 <li><a href="https://discord.gg/eePuZtZx94" target="_blank">Discord</a></li>
+                <li><a href="https://github.com/luckoask/guess.git" target="_blank">Game</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Click overlay -->
+
     <div class="click-overlay glow" id="clickOverlay" onclick="showContent()">
         c l i c k
     </div>
 
-    <!-- Content -->
+   
     <div class="content hidden" id="content">
         <section>
             <h2>Hi! Im luckoas, and this is my About Me.</h2>
-            <!-- Add your content here -->
+            
         </section>
 
-        <!-- Other sections for About, Telegram, and Contact pages -->
+      
 
 
     </div>
-
-
 
     <script>
         function showContent() {
@@ -140,7 +139,6 @@
             overlay.classList.add("hidden");
             content.classList.remove("hidden");
 
-            // Play the audio when content is shown
             var audio = document.getElementById("myAudio");
             audio.play();
         }
